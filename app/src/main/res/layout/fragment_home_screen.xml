@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="116dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="1000dp"
+            android:src="@drawable/insightslogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/insights_club"
+            android:layout_width="245sp"
+            android:layout_height="43sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.481"
+            app:srcCompat="@drawable/insights_club_vancouver_image" />
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/insights_club"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:fontFamily="@font/vancouver_free"-->
+        <!--            android:text="Insights Club"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textColor="#686868"-->
+        <!--            android:textSize="35sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/logo"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.497"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/logo"-->
+        <!--            app:layout_constraintVertical_bias="0.298" />-->
+
+
+        <ImageView
+            android:id="@+id/profile_pic"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/insights_club"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.164"
+            app:srcCompat="@drawable/profile_photo" />
+
+<!--need change from here -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                app:layout_constraintVertical_bias="0.0">
+
+<!--                card will send to next -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="340dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/card_view_image">
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+<!--                card end here -->
+<!--                recycler view here -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcomming"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/dots_1"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+            app:srcCompat="@drawable/dots" />
+
+        <ImageView
+            android:id="@+id/dots_2"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_1"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+            app:srcCompat="@drawable/dots_light" />
+
+        <ImageView
+            android:id="@+id/dots_3"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_2"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+            app:srcCompat="@drawable/dots_light" />
+
+
+        <TextView
+            android:id="@+id/upcomingEventsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Upcoming Events"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <TextView
+            android:id="@+id/view_more_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="5dp"
+            android:text="View more"
+            android:textAlignment="center"
+            android:textColor="#7B7B7B"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.774"
+            app:layout_constraintStart_toEndOf="@+id/upcomingEventsHeading"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upcomingEventsHeading">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingEventsHeading"
+                app:layout_constraintVertical_bias="0.0">
+
+<!--                card ongoing -->
+
+<!--card end -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcome"/>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/dots_4"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_2"
+            app:srcCompat="@drawable/dots" />
+
+        <ImageView
+            android:id="@+id/dots_5"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_4"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_2"
+            app:srcCompat="@drawable/dots_light" />
+
+        <ImageView
+            android:id="@+id/dots_6"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_5"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_2"
+            app:srcCompat="@drawable/dots_light" />
+
+
+        <TextView
+            android:id="@+id/ongoing_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Ongoing Events"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_2" />
+
+        <TextView
+            android:id="@+id/view_more_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="5dp"
+            android:text="View more"
+            android:textAlignment="center"
+            android:textColor="#7B7B7B"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.774"
+            app:layout_constraintStart_toEndOf="@+id/ongoing_events"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_2" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ongoing_events">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ongoing_events"
+                app:layout_constraintVertical_bias="0.0">
+
+<!--                card start -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="330dp"
+                    android:layout_height="147dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+
+                        <ImageView
+                            android:id="@+id/ongoing_events_photo_4"
+                            android:layout_width="127dp"
+                            android:layout_height="127dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/events_image" />
+
+                        <TextView
+                            android:id="@+id/ongoing_events_name_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="2dp"
+                            android:text="Name of the Event"
+                            android:textAlignment="center"
+                            android:textColor="#363636"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/button_4"
+                            android:layout_width="92dp"
+                            android:layout_height="26dp"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_4"
+                            app:layout_constraintTop_toBottomOf="@+id/ongoing_events_name_4"
+                            app:layout_constraintVertical_bias="0.809"
+                            app:srcCompat="@drawable/button" />
+
+                        <TextView
+                            android:id="@+id/mode_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="2dp"
+                            android:text="@string/offline"
+                            android:textAlignment="center"
+                            android:textColor="#FF6262"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/button_4"
+                            app:layout_constraintEnd_toEndOf="@+id/button_4"
+                            app:layout_constraintStart_toStartOf="@+id/button_4"
+                            app:layout_constraintTop_toTopOf="@+id/button_4" />
+
+                        <ImageView
+                            android:id="@+id/rec_4"
+                            android:layout_width="45dp"
+                            android:layout_height="47dp"
+                            android:layout_marginBottom="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.377"
+                            app:layout_constraintStart_toEndOf="@+id/button_4"
+                            app:srcCompat="@drawable/rec" />
+
+                        <TextView
+                            android:id="@+id/date_4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="1dp"
+                            android:text="02 OCT"
+                            android:textAlignment="center"
+                            android:textColor="#333333"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rec_4"
+                            app:layout_constraintEnd_toEndOf="@+id/rec_4"
+                            app:layout_constraintStart_toStartOf="@+id/rec_4"
+                            app:layout_constraintTop_toTopOf="@+id/rec_4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                card end-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_ongoing"/>
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/dots_7"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_3"
+            app:srcCompat="@drawable/dots" />
+
+        <ImageView
+            android:id="@+id/dots_8"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_7"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_3"
+            app:srcCompat="@drawable/dots_light" />
+
+        <ImageView
+            android:id="@+id/dots_9"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_8"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_3"
+            app:srcCompat="@drawable/dots_light" />
+
+
+        <TextView
+            android:id="@+id/past_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Past Events"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_3" />
+
+        <TextView
+            android:id="@+id/view_more_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="5dp"
+            android:text="View more"
+            android:textAlignment="center"
+            android:textColor="#7B7B7B"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.774"
+            app:layout_constraintStart_toEndOf="@+id/past_events"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_3" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/past_events">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/past_events"
+                app:layout_constraintVertical_bias="0.0">
+
+<!--                card start -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="330dp"
+                    android:layout_height="147dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="10dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white">
+
+
+                        <ImageView
+                            android:id="@+id/past_events_photo_7"
+                            android:layout_width="127dp"
+                            android:layout_height="127dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/events_image" />
+
+                        <TextView
+                            android:id="@+id/past_events_name_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="2dp"
+                            android:text="Name of the Event"
+                            android:textAlignment="center"
+                            android:textColor="#363636"
+                            android:textSize="15sp"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/button_7"
+                            android:layout_width="92dp"
+                            android:layout_height="26dp"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_7"
+                            app:layout_constraintTop_toBottomOf="@+id/past_events_name_7"
+                            app:layout_constraintVertical_bias="0.809"
+                            app:srcCompat="@drawable/button" />
+
+                        <TextView
+                            android:id="@+id/mode_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="2dp"
+                            android:text="@string/offline"
+                            android:textAlignment="center"
+                            android:textColor="#FF6262"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/button_7"
+                            app:layout_constraintEnd_toEndOf="@+id/button_7"
+                            app:layout_constraintStart_toStartOf="@+id/button_7"
+                            app:layout_constraintTop_toTopOf="@+id/button_7" />
+
+                        <ImageView
+                            android:id="@+id/rec_7"
+                            android:layout_width="45dp"
+                            android:layout_height="47dp"
+                            android:layout_marginBottom="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.377"
+                            app:layout_constraintStart_toEndOf="@+id/button_7"
+                            app:srcCompat="@drawable/rec" />
+
+                        <TextView
+                            android:id="@+id/date_7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="1dp"
+                            android:text="02 OCT"
+                            android:textAlignment="center"
+                            android:textColor="#333333"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rec_7"
+                            app:layout_constraintEnd_toEndOf="@+id/rec_7"
+                            app:layout_constraintStart_toStartOf="@+id/rec_7"
+                            app:layout_constraintTop_toTopOf="@+id/rec_7" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+<!--                card end -->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_past"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/dots_10"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
+            app:srcCompat="@drawable/dots" />
+
+        <ImageView
+            android:id="@+id/dots_11"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_10"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
+            app:srcCompat="@drawable/dots_light" />
+
+        <ImageView
+            android:id="@+id/dots_12"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@id/dots_11"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
+            app:srcCompat="@drawable/dots_light" />
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/linearLayout45"-->
+<!--            android:layout_width="336dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:gravity="bottom"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf=""-->
+<!--            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_4">-->
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation_bar"
+                android:layout_width="336dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom"
+                android:padding="10dp"
+                app:circularflow_radiusInDP="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
+                app:menu="@menu/bottom_navigation_view_components">
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+<!--        </RelativeLayout>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+

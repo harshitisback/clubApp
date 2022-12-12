@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.menu" >
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Menu"
+        tools:targetApi="31" >
+        <activity
+            android:name=".blogs_screen"
+            android:exported="false" />
+        <activity
+            android:name=".profile_page_screen"
+            android:exported="false" />
+        <activity
+            android:name=".upcoming_events_screen"
+            android:exported="false" />
+        <activity
+            android:name=".saved_blogs_screen"
+            android:exported="false" />
+        <activity
+            android:name=".registered_events_screen"
+            android:exported="false" />
+        <activity
+            android:name=".past_events_screen"
+            android:exported="false" />
+        <activity
+            android:name=".ongoing_events_screen"
+            android:exported="false" />
+        <activity
+            android:name=".articles_page_screen"
+            android:exported="false" />
+        <activity
+            android:name=".article_description_screen"
+            android:exported="false" />
+        <activity
+            android:name=".blog_description_screen"
+            android:exported="false" />
+        <activity
+            android:name=".signUp_screen"
+            android:exported="false" />
+        <activity
+            android:name=".login_screen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name=".technical_department"
+            android:exported="false" />
+        <activity
+            android:name=".editing_department"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Menu.NoActionBar" >
+
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

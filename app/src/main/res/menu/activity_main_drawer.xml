@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/events_e_image"
+            android:title="@string/Events" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_baseline_article_24"
+            android:title="@string/Articles" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/news_image"
+            android:title="@string/Newsletter" />
+
+        <item
+            android:id="@+id/blog"
+            android:icon="@drawable/blog_b_image"
+            android:title="@string/Blogs" />
+
+        <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/i_button"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_arrow_back_24"
+            android:title="Log Out" />
+
+        <item
+            android:id="@+id/test"
+            android:icon="@drawable/articles_icon"
+            android:title="test"
+            />
+
+
+
+
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/empty"
+
+            android:title=" " />
+    </group>
+
+    <group>
+
+        <item
+
+            android:title="Follow us"
+            />
+
+        <item
+            android:id="@+id/instagram"
+            android:icon="@drawable/ic_iplay_full"
+            android:title=""/>
+
+        <item
+            android:id="@+id/youtube"
+            android:icon="@drawable/youtube_image"
+            android:title=""/>
+        <item
+            android:id="@+id/linkdin"
+            android:icon="@drawable/linkdin_image"
+            android:title=""/>
+
+
+    </group>
+
+
+
+
+
+
+
+<!--    <group>-->
+<!--        <item-->
+<!--            android:id="@+id/followUs"-->
+<!--            android:title="Follow Us" />-->
+
+<!--    </group>-->
+
+<!--    <item-->
+<!--        android:title="Follow Us">-->
+
+<!--    </item>-->
+<!--    <item-->
+<!--    android:icon="@drawable/icon_ig"-->
+<!--        android:title="  "-->
+<!--        >-->
+
+<!--    </item>-->
+
+<!--    <group>-->
+
+<!--        <item android:id="@+id/instafollow"-->
+<!--            android:title="insta"-->
+<!--            android:icon="@drawable/lindin"-->
+<!--            />-->
+<!--    </group>-->
+
+
+</menu>
+
+
+
+
+

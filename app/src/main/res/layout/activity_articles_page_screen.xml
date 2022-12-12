@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/articles_heading"
+            android:layout_width="292sp"
+            android:layout_height="48sp"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="1250dp"
+            android:background="@drawable/articles_vancouver_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ImageView>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/articles_heading"-->
+        <!--            android:layout_width="292sp"-->
+        <!--            android:layout_height="52sp"-->
+        <!--            android:layout_marginBottom="1250dp"-->
+        <!--            android:fontFamily="sans-serif"-->
+        <!--            android:padding="5dp"-->
+        <!--            android:text="ARTICLES"-->
+        <!--            android:textColor="#686868"-->
+        <!--            android:textSize="35dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.394"-->
+        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--            app:layout_constraintRight_toRightOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="1.0">-->
+
+        <!--        </TextView>-->
+
+
+        <ImageView
+            android:id="@+id/articles_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/articles_heading"
+            app:layout_constraintEnd_toStartOf="@+id/articles_heading"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/articles_heading"
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_1"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_heading" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_1"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_1_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_1"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_1"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_1"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_1"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_1_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_1_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_1_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_1" />
+
+                <TextView
+                    android:id="@+id/article_1_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_1_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_1_description" />
+
+                <TextView
+                    android:id="@+id/article_1_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_1_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_1_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_2"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_1" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_2"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_2_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_2"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_2"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_2"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_2"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_2_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_2_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_2_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_2" />
+
+                <TextView
+                    android:id="@+id/article_2_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_2_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_2_description" />
+
+                <TextView
+                    android:id="@+id/article_2_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_2_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_2_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_3"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_2" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_3"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_3_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_3"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_3"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_3"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_3">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_3"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_3_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_3_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_3_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_3" />
+
+                <TextView
+                    android:id="@+id/article_3_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_3_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_3_description" />
+
+                <TextView
+                    android:id="@+id/article_3_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_3_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_3_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_4"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_3" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_4"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_4_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_4"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_4"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_4"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_4">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_4"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_4_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_4_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_4_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_4" />
+
+                <TextView
+                    android:id="@+id/article_4_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_4_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_4_description" />
+
+                <TextView
+                    android:id="@+id/article_4_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_4_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_4_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_5"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_4" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_5"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_5_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_5"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_5"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_5"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_5">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_5"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_5_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_5_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_5_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_5" />
+
+                <TextView
+                    android:id="@+id/article_5_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_5_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_5_description" />
+
+                <TextView
+                    android:id="@+id/article_5_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_5_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_5_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_6"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_5" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_6"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_6_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_6"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_6"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_6"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_6">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_6"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_6_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_6_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_6_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_6" />
+
+                <TextView
+                    android:id="@+id/article_6_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_6_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_6_description" />
+
+                <TextView
+                    android:id="@+id/article_6_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_6_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_6_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_7"
+            android:layout_width="354sp"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_6" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_7"
+                android:layout_width="354sp"
+                android:layout_height="140sp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/articles_7_photo"
+                    android:layout_width="103sp"
+                    android:layout_height="126sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/article_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_7"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_7"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_7"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_7">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_articles_7"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/articles_7_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/article_7_description"
+                    android:layout_width="219sp"
+                    android:layout_height="73sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/articles_7_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_articles_7" />
+
+                <TextView
+                    android:id="@+id/article_7_editor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Editor’s Name"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/articles_7_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/article_7_description" />
+
+                <TextView
+                    android:id="@+id/article_7_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="30 min"
+                    android:textAlignment="center"
+                    android:textColor="#535353"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/article_7_editor_name"
+                    app:layout_constraintTop_toBottomOf="@+id/article_7_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

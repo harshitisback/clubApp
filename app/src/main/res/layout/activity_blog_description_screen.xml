@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/bg_blog"
+            android:layout_width="420dp"
+            android:layout_height="366dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="1000dp"
+            android:background="@drawable/blog_description_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/save_blog"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="312dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_blog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bg_blog"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/blog_save_image" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/save_blog"
+            app:layout_constraintEnd_toStartOf="@+id/save_blog"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="@+id/bg_blog"
+            app:layout_constraintTop_toTopOf="@+id/bg_blog"
+            app:layout_constraintVertical_bias="0.541"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/name_blog"
+            android:layout_width="303dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="14dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="2dp"
+            android:text="Lorem ipsum dolor sit amet"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_blog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.051" />
+
+        <TextView
+            android:id="@+id/date_blog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:text="24 Aug 2022       ."
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_blog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog" />
+
+        <TextView
+            android:id="@+id/time_blog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="2dp"
+            android:text="12 min ago"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/bg_blog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/date_blog"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog" />
+
+        <ImageView
+            android:id="@+id/thumbs_up"
+            android:layout_width="54sp"
+            android:layout_height="54sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toEndOf="@+id/time_blog"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog"
+            app:srcCompat="@drawable/thumbs_up_green" />
+
+        <ImageView
+            android:id="@+id/thumbs_down"
+            android:layout_width="54sp"
+            android:layout_height="54sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toEndOf="@+id/thumbs_up"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog"
+            app:srcCompat="@drawable/thumbs_down_white" />
+
+        <TextView
+            android:id="@+id/blog_description"
+            android:layout_width="348sp"
+            android:layout_height="677sp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="400dp"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Elementum sagittis vitae et leo duis ut diam. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Tempus urna et pharetra pharetra massa massa ultricies mi.   Congue mauris rhoncus aenean vel elit scelerisque mauris. In cursus turpis massa tincidunt dui ut. A iaculis at erat pellentesque adipiscing commodo elit at. Interdum velit laoreet id donec ultrices tincidunt arcu non. Turpis egestas maecenas pharetra convallis posuere.    Sed adipiscing diam donec adipiscing tristique. A erat nam at lectus urna duis convallis convallis tellus. Vel pretium lectus quam id leo. Porttitor massa id neque aliquam vestibulum. Est velit egestas dui id ornare arcu odio ut sem. Aliquet nibh praesent tristique magna sit. Laoreet sit amet cursus sit. Lacus viverra vitae congue eu consequat ac felis donec. Arcu dictum varius duis at consectetur. Scelerisque viverra mauris in aliquam sem fringilla ut. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut.  Elementum sagittis vitae et leo duis ut diam. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Tempus urna et pharetra pharetra massa massa ultricies mi.   Congue mauris rhoncus aenean vel elit scelerisque mauris. In cursus turpis massa tincidunt dui ut. A iaculis at erat pellentesque adipiscing commodo elit at."
+            android:textColor="#4A4A4A"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bg_blog" />
+
+        <View
+            android:id="@+id/long_line"
+            android:layout_width="346sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blog_description"
+            android:background="@drawable/big_line" />
+
+        <TextView
+            android:id="@+id/comments_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="48dp"
+            android:text="Comments"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#F9A826"
+            android:textSize="17sp"
+            android:paddingRight="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blog_description" />
+
+        <ImageView
+            android:id="@+id/person_1_pp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comments_heading"
+            app:srcCompat="@drawable/comments_image" />
+
+        <TextView
+            android:id="@+id/person_1_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="WhiScoTch    9 min ago    "
+            android:textColor="#8E8E8E"
+            android:textSize="10dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@+id/person_1_pp"
+            app:layout_constraintStart_toEndOf="@+id/person_1_pp"
+            app:layout_constraintTop_toTopOf="@+id/person_1_pp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/person_1_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Lorem ipsum dolor"
+            android:textColor="#454545"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="@+id/person_1_name"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/person_1_pp"
+            app:layout_constraintTop_toBottomOf="@+id/person_1_name" />
+
+
+        <ImageView
+            android:id="@+id/person_2_pp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/person_1_pp"
+            app:srcCompat="@drawable/comments_image" />
+
+        <TextView
+            android:id="@+id/person_2_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="WhiScoTch    9 min ago    "
+            android:textColor="#8E8E8E"
+            android:textSize="10dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@+id/person_2_pp"
+            app:layout_constraintStart_toEndOf="@+id/person_2_pp"
+            app:layout_constraintTop_toTopOf="@+id/person_2_pp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/person_2_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Lorem ipsum dolor"
+            android:textColor="#454545"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="@+id/person_2_name"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/person_2_pp"
+            app:layout_constraintTop_toBottomOf="@+id/person_2_name" />
+
+        <ImageView
+            android:id="@+id/person_3_pp"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/person_2_pp"
+            app:srcCompat="@drawable/comments_image" />
+
+        <TextView
+            android:id="@+id/person_3_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:text="WhiScoTch    9 min ago    "
+            android:textColor="#8E8E8E"
+            android:textSize="10dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintBottom_toBottomOf="@+id/person_3_pp"
+            app:layout_constraintStart_toEndOf="@+id/person_3_pp"
+            app:layout_constraintTop_toTopOf="@+id/person_3_pp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/person_3_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Lorem ipsum dolor"
+            android:textColor="#454545"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="@+id/person_3_name"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/person_3_pp"
+            app:layout_constraintTop_toBottomOf="@+id/person_3_name" />
+
+        <EditText
+            android:id="@+id/comment_section"
+            android:layout_width="390sp"
+            android:layout_height="52sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="316dp"
+            android:layout_marginEnd="21dp"
+            android:hint="Add your comments"
+            android:textColor="#C6C6C6"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blog_description" />
+
+        <ImageView
+            android:id="@+id/send_bg"
+            android:layout_width="97sp"
+            android:layout_height="52sp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/comment_section"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.966"
+            app:layout_constraintStart_toStartOf="@+id/comment_section"
+            app:srcCompat="@drawable/send_bg" />
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins"
+            android:paddingRight="1dp"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/send_bg"
+            app:layout_constraintEnd_toEndOf="@+id/send_bg"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/send_bg"
+            app:layout_constraintTop_toTopOf="@+id/send_bg"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/upcomingEventsHeading"
+            android:layout_width="292sp"
+            android:layout_height="48sp"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="750sp"
+            android:background="@drawable/registraed_events_vancouver_photo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/articles_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/upcomingEventsHeading"
+            app:layout_constraintEnd_toStartOf="@+id/upcomingEventsHeading"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/upcomingEventsHeading"
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_1"
+            android:layout_width="352sp"
+            android:layout_height="162sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upcomingEventsHeading" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/upcoming_events_1_photo"
+                    android:layout_width="143sp"
+                    android:layout_height="147sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/upcoming_events_1_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_1"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_1"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_1"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_upcoming_events_1"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_1_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_1_description"
+                    android:layout_width="175sp"
+                    android:layout_height="83sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_1_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_upcoming_events_1" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_button_bg_1"
+                    android:layout_width="92sp"
+                    android:layout_height="26sp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_1_photo"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_1_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_1_description"
+                    app:srcCompat="@drawable/button" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_mode_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="2dp"
+                    android:text="@string/offline"
+                    android:textAlignment="center"
+                    android:textColor="#FF6262"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_1"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_button_bg_1"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_button_bg_1"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_button_bg_1" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_rec_1"
+                    android:layout_width="45sp"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.719"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_button_bg_1"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_1_description"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rec" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_date_1"
+                    android:layout_width="34dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="1dp"
+                    android:text="02 OCT"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_rec_1"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_rec_1"
+                    app:layout_constraintHorizontal_bias="0.636"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_rec_1"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_rec_1"
+                    app:layout_constraintVertical_bias="0.428" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_2"
+            android:layout_width="352sp"
+            android:layout_height="162sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_1" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/upcoming_events_2_photo"
+                    android:layout_width="143sp"
+                    android:layout_height="147sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/upcoming_events_1_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_2"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_2"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_2"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_upcoming_events_2"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_2_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_2_description"
+                    android:layout_width="175sp"
+                    android:layout_height="83sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_2_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_upcoming_events_2" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_button_bg_2"
+                    android:layout_width="92sp"
+                    android:layout_height="26sp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_2_photo"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_2_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_2_description"
+                    app:srcCompat="@drawable/button" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_mode_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="2dp"
+                    android:text="Online"
+                    android:textAlignment="center"
+                    android:textColor="#FF6262"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_2"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_button_bg_2"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_button_bg_2"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_button_bg_2" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_rec_2"
+                    android:layout_width="45sp"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.719"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_button_bg_2"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_2_description"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rec" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_date_2"
+                    android:layout_width="34dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="1dp"
+                    android:text="02 OCT"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_rec_2"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_rec_2"
+                    app:layout_constraintHorizontal_bias="0.636"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_rec_2"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_rec_2"
+                    app:layout_constraintVertical_bias="0.428" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_3"
+            android:layout_width="352sp"
+            android:layout_height="162sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_2" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/upcoming_events_3_photo"
+                    android:layout_width="143sp"
+                    android:layout_height="147sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/upcoming_events_1_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_3"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_3"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_3"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_3">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_upcoming_events_3"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_3_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_3_description"
+                    android:layout_width="175sp"
+                    android:layout_height="83sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_3_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_upcoming_events_3" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_button_bg_3"
+                    android:layout_width="92sp"
+                    android:layout_height="26sp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_3_photo"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_3_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_3_description"
+                    app:srcCompat="@drawable/button" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_mode_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="2dp"
+                    android:text="@string/offline"
+                    android:textAlignment="center"
+                    android:textColor="#FF6262"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_3"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_button_bg_3"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_button_bg_3"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_button_bg_3" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_rec_3"
+                    android:layout_width="45sp"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.719"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_button_bg_3"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_3_description"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rec" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_date_3"
+                    android:layout_width="34dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="1dp"
+                    android:text="02 OCT"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_rec_3"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_rec_3"
+                    app:layout_constraintHorizontal_bias="0.636"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_rec_3"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_rec_3"
+                    app:layout_constraintVertical_bias="0.428" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articles_card_view_4"
+            android:layout_width="352sp"
+            android:layout_height="162sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articles_card_view_3" >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/upcoming_events_4_photo"
+                    android:layout_width="143sp"
+                    android:layout_height="147sp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/upcoming_events_1_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_layout_4"
+                    app:layout_constraintEnd_toEndOf="@id/constraint_layout_4"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toStartOf="@id/constraint_layout_4"
+                    app:layout_constraintTop_toTopOf="@id/constraint_layout_4">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/name_of_upcoming_events_4"
+                    android:layout_width="154sp"
+                    android:layout_height="24sp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:padding="2dp"
+                    android:text="Name of the Articles"
+                    android:textColor="#363636"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.075"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_4_photo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_4_description"
+                    android:layout_width="175sp"
+                    android:layout_height="83sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins"
+                    android:padding="2dp"
+                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over, Lorem Ipsum is not simply random text......  Read more"
+                    android:textColor="#A3A3A3"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.297"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_4_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/name_of_upcoming_events_4" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_button_bg_4"
+                    android:layout_width="92sp"
+                    android:layout_height="26sp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_4_photo"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_4_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_4_description"
+                    app:srcCompat="@drawable/button" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_mode_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="2dp"
+                    android:text="@string/offline"
+                    android:textAlignment="center"
+                    android:textColor="#FF6262"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_4"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_button_bg_4"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_button_bg_4"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_button_bg_4" />
+
+                <ImageView
+                    android:id="@+id/upcoming_events_rec_4"
+                    android:layout_width="45sp"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_button_bg_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.719"
+                    app:layout_constraintStart_toEndOf="@+id/upcoming_events_button_bg_4"
+                    app:layout_constraintTop_toBottomOf="@+id/upcoming_events_4_description"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rec" />
+
+                <TextView
+                    android:id="@+id/upcoming_events_date_4"
+                    android:layout_width="34dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="1dp"
+                    android:text="02 OCT"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/upcoming_events_rec_4"
+                    app:layout_constraintEnd_toEndOf="@+id/upcoming_events_rec_4"
+                    app:layout_constraintHorizontal_bias="0.636"
+                    app:layout_constraintStart_toStartOf="@+id/upcoming_events_rec_4"
+                    app:layout_constraintTop_toTopOf="@+id/upcoming_events_rec_4"
+                    app:layout_constraintVertical_bias="0.428" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

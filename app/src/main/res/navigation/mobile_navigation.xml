@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeScreen">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.menu.ui.events.HomeFragment"
+        android:label="@string/Events"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.menu.ui.gallery.GalleryFragment"
+        android:label="@string/Articles"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.menu.ui.slideshow.SlideshowFragment"
+        android:label="@string/Newsletter"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.example.menu.fragments.AboutUs"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us_initial" />
+
+    <fragment
+        android:id="@+id/blog"
+        android:name="com.example.menu.fragments.BlogsFragment"
+        android:label="@string/Blogs"
+        tools:layout="@layout/fragment_blogs" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.menu.fragments.HomeScreen"
+        android:label="@string/Home"
+        tools:layout="@layout/fragment_home_screen" />
+    <fragment
+        android:id="@+id/test"
+        android:name="com.example.menu.test"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+
+
+</navigation>
+

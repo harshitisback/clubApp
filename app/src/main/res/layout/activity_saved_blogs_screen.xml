@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".saved_blogs_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_baseline_arrow_back_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Saved Blogs"
+            android:layout_gravity="center"
+            android:textSize="36sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="103dp"
+                android:layout_height="126dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="14dp"
+                android:src="@drawable/sbpic1" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:text="Event1"
+                android:textSize="14sp">
+
+            </TextView>
+
+            <!--<TextView
+                android:id="@+id/textview2"
+                android:layout_width="268dp"
+                android:layout_height="82dp"
+                android:layout_below="@+id/textview1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/readmore"></TextView>-->
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview1"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hello this is meta data Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over,"
+                android:textSize="12sp"> </TextView>
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview2"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="27 AUG 2022"
+                android:textColor="#535353"
+                android:textSize="10sp"></TextView>
+
+            <Button
+                android:id="@+id/readmorebtn1"
+                android:onClick="registeredevents"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_below="@+id/textview1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:background="#00000000"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:text="Read more"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/articleimageview2"
+                android:layout_width="103dp"
+                android:layout_height="126dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="14dp"
+                android:src="@drawable/sbpic2" />
+
+            <TextView
+                android:id="@+id/articletextview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/articleimageview2"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:text="Event1"
+                android:textSize="14sp"></TextView>
+
+            <!--<TextView
+                android:id="@+id/textview2"
+                android:layout_width="268dp"
+                android:layout_height="82dp"
+                android:layout_below="@+id/textview1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/readmore"></TextView>-->
+
+            <TextView
+                android:id="@+id/articletextview5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articletextview4"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/articleimageview2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hello this is meta data Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over,"
+                android:textSize="12sp"> </TextView>
+
+            <TextView
+                android:id="@+id/aticletextview6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articletextview5"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/articleimageview2"
+                android:fontFamily="@font/poppins_bold"
+                android:text="30 AUG 2022"
+                android:textColor="#535353"
+                android:textSize="10sp"></TextView>
+
+            <Button
+                android:id="@+id/articiclereadmorebtn2"
+                android:onClick="pastevents"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_below="@+id/articletextview4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:background="#00000000"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:text="Read more"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/articleimageview3"
+                android:layout_width="103dp"
+                android:layout_height="126dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="14dp"
+                android:src="@drawable/sbpic3" />
+
+            <TextView
+                android:id="@+id/articletextview7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/articleimageview3"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:text="Event1"
+                android:textSize="14sp"> </TextView>
+
+            <!--<TextView
+                android:id="@+id/textview2"
+                android:layout_width="268dp"
+                android:layout_height="82dp"
+                android:layout_below="@+id/textview1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toEndOf="@+id/imageview1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/readmore"></TextView>-->
+
+            <TextView
+                android:id="@+id/articletextview8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articletextview7"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/articleimageview3"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hello this is meta data Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over,"
+                android:textSize="12sp"></TextView>
+
+            <TextView
+                android:id="@+id/textview9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/articletextview8"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/articleimageview3"
+                android:fontFamily="@font/poppins_bold"
+                android:text="1 SEP 2022"
+                android:textColor="#535353"
+                android:textSize="10sp"></TextView>
+
+            <Button
+                android:id="@+id/readmorebtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_below="@+id/articletextview7"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:background="#00000000"
+                android:textSize="10sp"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="2dp"
+                android:text="Read more" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

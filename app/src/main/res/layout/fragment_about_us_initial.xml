@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="400sp"
+            android:layout_height="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/aboutusimage"
+            android:padding="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="225sp"
+            android:layout_height="212sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/background"
+            app:layout_constraintEnd_toEndOf="@+id/background"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="@+id/background"
+            app:layout_constraintTop_toTopOf="@+id/background"
+            app:layout_constraintVertical_bias="0.148"
+            app:srcCompat="@drawable/insightslogo" />
+
+        <TextView
+            android:id="@+id/moto"
+            android:layout_width="400sp"
+            android:layout_height="28sp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="“Surrounded by Data, Starved by Insights !”"
+            android:textAlignment="center"
+            android:textColor="#575757"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ourGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="300dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Our Goals"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/faded_line_1"
+            android:layout_width="120dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ourGoal"
+            app:layout_constraintEnd_toStartOf="@+id/ourGoal"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ourGoal"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_2"
+            android:layout_width="120dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ourGoal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ourGoal"
+            app:layout_constraintTop_toBottomOf="@+id/ourGoal"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+
+        <TextView
+            android:id="@+id/ourGoal_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="5dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            android:textAlignment="center"
+            android:textColor="#767676"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ourGoal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/What_We_Do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="What we do"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ourGoal_description"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/faded_line_3"
+            android:layout_width="110dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/What_We_Do"
+            app:layout_constraintEnd_toStartOf="@+id/What_We_Do"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_4"
+            android:layout_width="120dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/What_We_Do"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/What_We_Do"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:id="@+id/What_We_Do_description_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="2dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            android:textAlignment="center"
+            android:textColor="#767676"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/What_We_Do_description_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="2dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            android:textAlignment="center"
+            android:textColor="#767676"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do_description_1"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/What_We_Do_description_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="2dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            android:textAlignment="center"
+            android:textColor="#767676"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do_description_2"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/Faculty_Coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Faculty coordinator"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/What_We_Do_description_3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/faded_line_5"
+            android:layout_width="70dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/Faculty_Coordinator"
+            app:layout_constraintEnd_toStartOf="@+id/Faculty_Coordinator"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_6"
+            android:layout_width="70dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/Faculty_Coordinator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Faculty_Coordinator"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/cardView_1"
+            android:layout_width="155dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/student_coordinator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/background_007" />
+
+        <ImageView
+            android:id="@+id/Sandeep_Sahu_photo"
+            android:layout_width="106dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_1"
+            app:layout_constraintEnd_toEndOf="@+id/cardView_1"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/cardView_1"
+            app:layout_constraintStart_toStartOf="@+id/cardView_1"
+            app:layout_constraintTop_toTopOf="@+id/cardView_1"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/photo_people" />
+
+        <TextView
+            android:id="@+id/name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:padding="2dp"
+            android:text="Mr. Sandeep Sahu"
+            android:textColor="#363636"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/Sandeep_Sahu_photo"
+            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintStart_toStartOf="@+id/Sandeep_Sahu_photo"
+            app:layout_constraintTop_toBottomOf="@+id/Sandeep_Sahu_photo" />
+
+        <TextView
+            android:id="@+id/designation_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="1dp"
+            android:text="Faculty ,SCSE"
+            android:textColor="#686868"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@+id/name_1"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/name_1"
+            app:layout_constraintTop_toBottomOf="@+id/name_1" />
+
+
+        <ImageView
+            android:id="@+id/cardView_2"
+            android:layout_width="155dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/student_coordinator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.619"
+            app:layout_constraintStart_toEndOf="@+id/cardView_1"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/background_007" />
+
+        <ImageView
+            android:id="@+id/Atul_Aman_photo"
+            android:layout_width="106dp"
+            android:layout_height="79dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_2"
+            app:layout_constraintEnd_toEndOf="@+id/cardView_2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/cardView_2"
+            app:layout_constraintStart_toStartOf="@+id/cardView_2"
+            app:layout_constraintTop_toTopOf="@+id/cardView_2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/photo_people" />
+
+        <TextView
+            android:id="@+id/name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:padding="2dp"
+            android:text="Dr. Atul Aman"
+            android:textColor="#363636"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/Atul_Aman_photo"
+            app:layout_constraintHorizontal_bias="0.416"
+            app:layout_constraintStart_toStartOf="@+id/Atul_Aman_photo"
+            app:layout_constraintTop_toBottomOf="@+id/Atul_Aman_photo" />
+
+        <TextView
+            android:id="@+id/designation_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:padding="1dp"
+            android:text="Faculty ,SCSE"
+            android:textColor="#686868"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@+id/name_2"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/name_2"
+            app:layout_constraintTop_toBottomOf="@+id/name_2" />
+
+
+        <TextView
+            android:id="@+id/departments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="549dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Departments"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator" />
+
+        <View
+            android:id="@+id/faded_line_9"
+            android:layout_width="110dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/departments"
+            app:layout_constraintEnd_toStartOf="@+id/departments"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departments"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_10"
+            android:layout_width="110dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/departments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/departments"
+            app:layout_constraintTop_toBottomOf="@+id/departments"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+
+        <ImageView
+            android:id="@+id/technical_team"
+            android:layout_width="167sp"
+            android:layout_height="233sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departments"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/technical_team" />
+
+        <TextView
+            android:id="@+id/tech_team"
+            android:layout_width="152sp"
+            android:layout_height="110sp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8sp"
+            android:text="Technical Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/technical_team"
+            app:layout_constraintStart_toStartOf="@+id/technical_team"
+            app:layout_constraintTop_toTopOf="@+id/technical_team" />
+
+        <ImageView
+            android:id="@+id/editing_team"
+            android:layout_width="166sp"
+            android:layout_height="156sp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toEndOf="@+id/technical_team"
+            app:layout_constraintTop_toBottomOf="@+id/departments"
+            app:layout_constraintVertical_bias="0.031"
+            app:srcCompat="@drawable/editing_team" />
+
+        <TextView
+            android:id="@+id/edit_team"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8sp"
+            android:text="Editing Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/editing_team"
+            app:layout_constraintEnd_toEndOf="@+id/editing_team"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="@+id/editing_team"
+            app:layout_constraintTop_toTopOf="@+id/editing_team"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/content_team"
+            android:layout_width="167sp"
+            android:layout_height="233sp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toEndOf="@+id/technical_team"
+            app:layout_constraintTop_toBottomOf="@+id/editing_team"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/content_team" />
+
+        <TextView
+            android:id="@+id/cont_team"
+            android:layout_width="132sp"
+            android:layout_height="90sp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8sp"
+            android:text="Content Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/content_team"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="@+id/content_team"
+            app:layout_constraintTop_toTopOf="@+id/content_team" />
+
+        <ImageView
+            android:id="@+id/design_team"
+            android:layout_width="166sp"
+            android:layout_height="156sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/content_team"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/technical_team"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/design_team" />
+
+        <TextView
+            android:id="@+id/desi_team"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8sp"
+            android:text="Design Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/design_team"
+            app:layout_constraintEnd_toEndOf="@+id/design_team"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="@+id/design_team"
+            app:layout_constraintTop_toTopOf="@+id/design_team"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/pr_outreach_team"
+            android:layout_width="167sp"
+            android:layout_height="233sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/content_team"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/design_team"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/pr_outreach_team" />
+
+        <TextView
+            android:id="@+id/oure_team"
+            android:layout_width="140dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8sp"
+            android:text="PR and Outreach Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pr_outreach_team"
+            app:layout_constraintEnd_toEndOf="@+id/pr_outreach_team"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/pr_outreach_team"
+            app:layout_constraintTop_toTopOf="@+id/pr_outreach_team"
+            app:layout_constraintVertical_bias="0.448" />
+
+        <ImageView
+            android:id="@+id/event_resource_team"
+            android:layout_width="166sp"
+            android:layout_height="156sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.172"
+            app:layout_constraintStart_toEndOf="@+id/pr_outreach_team"
+            app:layout_constraintTop_toBottomOf="@+id/content_team"
+            app:layout_constraintVertical_bias="0.027"
+            app:srcCompat="@drawable/event_resourse_team" />
+
+        <TextView
+            android:id="@+id/resourse_team"
+            android:layout_width="142sp"
+            android:layout_height="100sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="8sp"
+            android:text="Events and Resource Team"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/event_resource_team"
+            app:layout_constraintEnd_toEndOf="@+id/event_resource_team"
+            app:layout_constraintStart_toStartOf="@+id/event_resource_team"
+            app:layout_constraintTop_toTopOf="@+id/event_resource_team" />
+
+        <TextView
+            android:id="@+id/follow_Us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Follow us on"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pr_outreach_team"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/faded_line_11"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/follow_Us"
+            app:layout_constraintEnd_toStartOf="@+id/follow_Us"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_12"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/follow_Us"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/follow_Us"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile_pic"
+            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.026"
+            app:srcCompat="@drawable/instagram_image" />
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/linkdin_image" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.778"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/discord_image" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.869"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.025"
+            app:srcCompat="@drawable/whatsapp_image" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.986"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.024"
+            app:srcCompat="@drawable/twitter_image" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.821"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.037"
+            app:srcCompat="@drawable/youtube_image" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/facebook_image" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.684"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/follow_Us"
+            app:layout_constraintVertical_bias="0.034"
+            app:srcCompat="@drawable/telegram_image" />
+
+        <TextView
+            android:id="@+id/student_coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="226dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="5dp"
+            android:text="Student coordinator"
+            android:textAlignment="center"
+            android:textColor="#F9A826"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Faculty_Coordinator" />
+
+        <View
+            android:id="@+id/faded_line_7"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/student_coordinator"
+            app:layout_constraintEnd_toStartOf="@+id/student_coordinator"
+            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/student_coordinator"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+        <View
+            android:id="@+id/faded_line_8"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/student_coordinator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/student_coordinator"
+            app:layout_constraintTop_toBottomOf="@+id/student_coordinator"
+            app:layout_constraintVertical_bias="0.423"
+            android:background="@drawable/line" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/student_coordinator">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/student_coordinator"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="146dp"
+                    android:layout_height="213dp"
+                    android:layout_margin="19dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/photo_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="102dp"
+                            android:layout_marginTop="5dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/student_coordinator_photo" />
+
+                        <TextView
+                            android:id="@+id/students_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="5dp"
+                            android:text="Amar Kumar"
+                            android:textAlignment="center"
+                            android:textColor="#363636"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/position"
+                            android:layout_width="149dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="3dp"
+                            android:text="Vice President"
+                            android:textAlignment="center"
+                            android:textColor="#686868"
+                            android:textSize="15sp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="146dp"
+                    android:layout_height="213dp"
+                    android:layout_margin="19dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/photo_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="102dp"
+                            android:layout_marginTop="5dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/student_coordinator_photo" />
+
+                        <TextView
+                            android:id="@+id/students_name_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="5dp"
+                            android:text="Anubhav Raj"
+                            android:textAlignment="center"
+                            android:textColor="#363636"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/position_2"
+                            android:layout_width="149dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="3dp"
+                            android:text="President"
+                            android:textAlignment="center"
+                            android:textColor="#686868"
+                            android:textSize="15sp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="146dp"
+                    android:layout_height="213dp"
+                    android:layout_margin="19dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/photo_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="102dp"
+                            android:layout_marginTop="5dp"
+                            android:padding="2dp"
+                            app:srcCompat="@drawable/student_coordinator_photo" />
+
+                        <TextView
+                            android:id="@+id/students_name_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="5dp"
+                            android:text="Sanjeev Kumar"
+                            android:textAlignment="center"
+                            android:textColor="#363636"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/position_3"
+                            android:layout_width="149dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/poppins"
+                            android:padding="3dp"
+                            android:text="Administor"
+                            android:textAlignment="center"
+                            android:textColor="#686868"
+                            android:textSize="15sp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
