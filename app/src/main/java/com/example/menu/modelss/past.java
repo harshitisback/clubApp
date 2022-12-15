@@ -1,18 +1,17 @@
 package com.example.menu.modelss;
 
-
-public class upcomming {
+public class past {
 
     String name;
     String mode;
     String date;
     String urlImg;
 
-    public upcomming() {
+    public past() {
 
     }
 
-    public upcomming(String name, String mode, String date, String urlImg) {
+    public past(String name, String mode, String date, String urlImg) {
         this.name = name;
         this.mode = mode;
         this.date = date;

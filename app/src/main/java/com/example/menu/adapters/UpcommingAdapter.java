@@ -13,15 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.menu.R;
 import com.example.menu.modelss.upcomming;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 
 public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.ViewHolder> {
 
-    private Context context;
-    private List<upcomming> upcommingList;
+    private final Context context;
+    private final List<upcomming> upcommingList;
 
     public UpcommingAdapter(Context context, List<upcomming> upcommingList) {
         this.context = context;
@@ -31,7 +30,7 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
     @NonNull
     @Override
     public UpcommingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.upcomming_rec,parent,false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.upcomming_rec, parent, false));
     }
 
     @Override
@@ -47,17 +46,17 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
         return upcommingList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView eventImg;
         TextView name, mode, date;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             eventImg = itemView.findViewById(R.id.upcoming_events_photo);
             name = itemView.findViewById(R.id.upcoming_events_name);
-            mode = itemView.findViewById(R.id.mode);
-            date = itemView.findViewById(R.id.date);
-
+            mode = itemView.findViewById(R.id.upcoming_event_mode);
+            date = itemView.findViewById(R.id.upcoming_event_date);
 
 
         }

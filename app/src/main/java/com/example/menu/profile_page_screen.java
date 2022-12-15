@@ -22,17 +22,19 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import java.util.Objects;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class profile_page_screen extends AppCompatActivity {
 
 
-  FirebaseStorage storage;
-  FirebaseAuth auth;
-  FirebaseDatabase database;
+    FirebaseStorage storage;
+    FirebaseAuth auth;
+    FirebaseDatabase database;
 
-  ImageView profilepic;
-  TextView profilename, email;
+    ImageView profilepic;
+    TextView profilename, email;
 
 
     @Override
@@ -48,11 +50,12 @@ public class profile_page_screen extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
 
-        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+        database.getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         UserModel userModel = snapshot.getValue(UserModel.class);
+                        assert userModel != null;
                         profilename.setText(userModel.getName());
                         email.setText(userModel.getEmail());
                         Glide.with(profile_page_screen.this).load(userModel.getImageUrl()).into(profilepic);
@@ -63,7 +66,6 @@ public class profile_page_screen extends AppCompatActivity {
 
                     }
                 });
-
 
 
     }
