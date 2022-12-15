@@ -29,7 +29,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
     @NonNull
     @Override
     public OngoingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.ongoing_rec, parent, false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.upcomming_rec, parent, false));
     }
 
     @Override
@@ -52,10 +52,14 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            ongoingImg = itemView.findViewById(R.id.ongoing_events_photo);
-            name = itemView.findViewById(R.id.ongoing_event_name);
-            mode = itemView.findViewById(R.id.ongoing_mode);
-            date = itemView.findViewById(R.id.ongoing_date);
+//            ongoingImg = itemView.findViewById(R.id.ongoing_events_photo);
+//            name = itemView.findViewById(R.id.ongoing_event_name);
+//            mode = itemView.findViewById(R.id.ongoing_mode);
+//            date = itemView.findViewById(R.id.ongoing_date);
+            ongoingImg = itemView.findViewById(R.id.upcoming_events_photo);
+            name = itemView.findViewById(R.id.upcoming_events_name);
+            mode = itemView.findViewById(R.id.upcoming_event_mode);
+            date = itemView.findViewById(R.id.upcoming_event_date);
 
 
         }

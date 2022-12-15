@@ -29,8 +29,6 @@
                 android:layout_marginLeft="170dp"
                 />
 
-
-
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -40,8 +38,38 @@
             android:id="@+id/upcomming_rec_test"/>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ongoing Events"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View More"
+                android:layout_marginLeft="170dp"
+                />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/onging_test_rec"/>
+
+
 
     </LinearLayout>
+
+
+
+
+
 
 
 

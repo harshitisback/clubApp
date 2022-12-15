@@ -82,6 +82,7 @@ public class HomeScreen extends Fragment {
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 
+
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
