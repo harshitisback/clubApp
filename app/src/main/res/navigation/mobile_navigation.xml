@@ -39,11 +39,7 @@
         android:name="com.example.menu.fragments.HomeScreen"
         android:label="@string/Home"
         tools:layout="@layout/fragment_home_screen" />
-    <fragment
-        android:id="@+id/test"
-        android:name="com.example.menu.test"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+
 
 
 </navigation>

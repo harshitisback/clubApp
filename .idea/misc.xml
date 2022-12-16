@@ -88,13 +88,18 @@
         <entry key="..\:/Users/ASUS/Menu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.222" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/activity_profile_page_screen.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/app_bar_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_gallery.xml" value="0.12487335359675786" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_home.xml" value="0.12487335359675786" />
-        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_home_screen.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_test.xml" value="0.12487335359675786" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_home_screen.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/fragment_test.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/home_test_shashwat.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/nav_header_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/ongoing_rec.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/past_rec.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/layout/upcomming_rec.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/clubApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.25677083333333334" />
       </map>
     </option>
   </component>

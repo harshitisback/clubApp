@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -33,82 +32,70 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class HomeScreen extends Fragment {
 
-    RecyclerView upcom_rec;
-    RecyclerView on_rec;
-    RecyclerView past_rec;
+    RecyclerView rec_upcomming;
+    List<upcomming> upcommingList;
+    UpcommingAdapter upcommingAdapter;
 
     FirebaseFirestore db;
 
 
     public HomeScreen() {
-
+        // Required empty public constructor
     }
 
-    List<upcomming> upcommingList;
-    UpcommingAdapter upcommingAdapter;
 
-    List<ongoing> ongoingList;
-    OngoingAdapter ongoingAdapter;
-
-    List<past> pastList;
-    PastAdapter pastAdapter;
-
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_home_screen, container, false);
-
+        // Inflate the layout for this fragment
         db = FirebaseFirestore.getInstance();
-        upcom_rec = view.findViewById(R.id.rec_upcome);
-        on_rec = view.findViewById(R.id.rec_ongoing);
-        past_rec = view.findViewById(R.id.rec_past);
+        View root = inflater.inflate(R.layout.fragment_home_screen, container, false);
 
-        ImageView profile_pic = (ImageView) view.findViewById(R.id.profile_pic_home_screen);
+        ImageView profile_pic = (ImageView) root.findViewById(R.id.profile_pic_home_screen);
 
-
-        // upcoming events ->
-        upcom_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        // Upcoming Events
+        rec_upcomming = root.findViewById(R.id.upcomming_rec);
+        rec_upcomming.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         upcommingList = new ArrayList<>();
         upcommingAdapter = new UpcommingAdapter(getActivity(), upcommingList);
-        upcom_rec.setAdapter(upcommingAdapter);
+        rec_upcomming.setAdapter(upcommingAdapter);
 
         db.collection("UpcommingEvents")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
-
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                upcomming up = document.toObject(upcomming.class);
-                                upcommingList.add(up);
+                                upcomming upcomming = document.toObject(upcomming.class);
+                                upcommingList.add(upcomming);
                                 upcommingAdapter.notifyDataSetChanged();
+
                             }
                         } else {
-                            Toast.makeText(getActivity(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Error", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
 
 
-        // ongoing events ->
-        on_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        // Ongoing Events
+        RecyclerView ongoing_rec;
+        List<ongoing> ongoingList;
+        OngoingAdapter ongoingAdapter;
+
+        ongoing_rec = root.findViewById(R.id.ongoing_rec);
+        ongoing_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         ongoingList = new ArrayList<>();
         ongoingAdapter = new OngoingAdapter(getActivity(), ongoingList);
-        on_rec.setAdapter(ongoingAdapter);
+        ongoing_rec.setAdapter(ongoingAdapter);
 
         db.collection("OngoingEvents")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -117,15 +104,21 @@ public class HomeScreen extends Fragment {
                                 ongoing ongoing = document.toObject(ongoing.class);
                                 ongoingList.add(ongoing);
                                 ongoingAdapter.notifyDataSetChanged();
+
                             }
                         } else {
-                            Toast.makeText(getActivity(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Error", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
 
 
-        // Past event ->
+        // Past Events
+        RecyclerView past_rec;
+        List<past> pastList;
+        PastAdapter pastAdapter;
+
+        past_rec = root.findViewById(R.id.past_rec);
         past_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         pastList = new ArrayList<>();
         pastAdapter = new PastAdapter(getActivity(), pastList);
@@ -134,7 +127,6 @@ public class HomeScreen extends Fragment {
         db.collection("PastEvents")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-
                     @SuppressLint("NotifyDataSetChanged")
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -143,14 +135,16 @@ public class HomeScreen extends Fragment {
                                 past past = document.toObject(past.class);
                                 pastList.add(past);
                                 pastAdapter.notifyDataSetChanged();
+
                             }
                         } else {
-                            Toast.makeText(getActivity(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Error", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
 
 
+        // Profile Pic
         profile_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,7 +153,8 @@ public class HomeScreen extends Fragment {
             }
         });
 
-        return view;
+
+        return root;
 
     }
 

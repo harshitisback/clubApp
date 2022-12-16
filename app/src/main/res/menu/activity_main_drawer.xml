@@ -35,16 +35,6 @@
             android:icon="@drawable/ic_baseline_arrow_back_24"
             android:title="Log Out" />
 
-        <item
-            android:id="@+id/test"
-            android:icon="@drawable/articles_icon"
-            android:title="test"
-            />
-
-
-
-
-
     </group>
 
     <group>
@@ -58,57 +48,51 @@
 
         <item
 
-            android:title="Follow us"
-            />
+            android:title="Follow us" />
 
         <item
             android:id="@+id/instagram"
             android:icon="@drawable/ic_iplay_full"
-            android:title=""/>
+            android:title="" />
 
         <item
             android:id="@+id/youtube"
             android:icon="@drawable/youtube_image"
-            android:title=""/>
+            android:title="" />
         <item
             android:id="@+id/linkdin"
             android:icon="@drawable/linkdin_image"
-            android:title=""/>
+            android:title="" />
 
 
     </group>
 
 
+    <!--    <group>-->
+    <!--        <item-->
+    <!--            android:id="@+id/followUs"-->
+    <!--            android:title="Follow Us" />-->
 
+    <!--    </group>-->
 
+    <!--    <item-->
+    <!--        android:title="Follow Us">-->
 
+    <!--    </item>-->
+    <!--    <item-->
+    <!--    android:icon="@drawable/icon_ig"-->
+    <!--        android:title="  "-->
+    <!--        >-->
 
+    <!--    </item>-->
 
-<!--    <group>-->
-<!--        <item-->
-<!--            android:id="@+id/followUs"-->
-<!--            android:title="Follow Us" />-->
+    <!--    <group>-->
 
-<!--    </group>-->
-
-<!--    <item-->
-<!--        android:title="Follow Us">-->
-
-<!--    </item>-->
-<!--    <item-->
-<!--    android:icon="@drawable/icon_ig"-->
-<!--        android:title="  "-->
-<!--        >-->
-
-<!--    </item>-->
-
-<!--    <group>-->
-
-<!--        <item android:id="@+id/instafollow"-->
-<!--            android:title="insta"-->
-<!--            android:icon="@drawable/lindin"-->
-<!--            />-->
-<!--    </group>-->
+    <!--        <item android:id="@+id/instafollow"-->
+    <!--            android:title="insta"-->
+    <!--            android:icon="@drawable/lindin"-->
+    <!--            />-->
+    <!--    </group>-->
 
 
 </menu>
