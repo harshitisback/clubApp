@@ -33,17 +33,15 @@
             android:id="@+id/userImag"
             android:layout_width="128dp"
             android:layout_height="128dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="132dp"
             android:contentDescription="@string/todo"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/viewMore"
-            app:layout_constraintEnd_toStartOf="@+id/viewMore"
-            app:layout_constraintHorizontal_bias="0.982"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_4"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/rectangle_4"
-            app:layout_constraintVertical_bias="0.04"
+            app:layout_constraintVertical_bias="0.742"
             tools:src="@drawable/comments_image" />
 
         <TextView
