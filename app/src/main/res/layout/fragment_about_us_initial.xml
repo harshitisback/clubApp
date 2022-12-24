@@ -122,7 +122,7 @@
             android:layout_marginTop="2dp"
             android:fontFamily="@font/poppins"
             android:padding="5dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            android:text="Insights Club's objective is to provide a uniform flow of information directly and through the students of our university regarding all the events and current affairs of the university through online mode (web/socials) and on-field journalism. We intend to hold certain intra-campus events where students from any branch and campus are welcome to participate. The club will also focus on improving abilities that will stimulate the creation of innovative media messages."
             android:textAlignment="center"
             android:textColor="#767676"
             android:textSize="15sp"

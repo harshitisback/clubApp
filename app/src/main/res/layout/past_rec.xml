@@ -16,7 +16,7 @@
             android:id="@+id/past_events_photo"
             android:layout_width="137dp"
             android:layout_height="137dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="-5dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="2dp"
             android:src="@drawable/events_image" />
@@ -74,7 +74,7 @@
                     android:id="@+id/rec_1"
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="12dp"
                     android:background="@drawable/rec"

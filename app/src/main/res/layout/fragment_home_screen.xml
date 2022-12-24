@@ -37,7 +37,7 @@
                 android:id="@+id/profile_pic_home_screen"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="15dp"
                 android:src="@drawable/profile_photo" />
@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="-400dp"
+                android:layout_marginStart="-397dp"
                 android:layout_marginTop="165dp"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="5dp"
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="58dp"
+                android:layout_marginStart="82dp"
                 android:layout_marginTop="165dp"
                 android:fontFamily="@font/poppins_bold"
                 android:padding="5dp"
