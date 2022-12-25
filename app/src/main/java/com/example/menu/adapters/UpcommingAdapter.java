@@ -1,6 +1,8 @@
 package com.example.menu.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
 
     private final Context context;
     private final List<upcomming> upcommingList;
+    String link;
 
     public UpcommingAdapter(Context context, List<upcomming> upcommingList) {
         this.context = context;
@@ -39,6 +42,18 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
         holder.name.setText(upcommingList.get(position).getName());
         holder.mode.setText(upcommingList.get(position).getMode());
         holder.date.setText(upcommingList.get(position).getDate());
+
+        upcomming up = upcommingList.get(position);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                link = up.getLink();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(link));
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override

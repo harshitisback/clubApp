@@ -7,16 +7,26 @@ public class upcomming {
     String mode;
     String date;
     String urlImg;
+    String link;
 
     public upcomming() {
 
     }
 
-    public upcomming(String name, String mode, String date, String urlImg) {
+    public upcomming(String name, String mode, String date, String urlImg, String link) {
         this.name = name;
         this.mode = mode;
         this.date = date;
         this.urlImg = urlImg;
+        this.link = link;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getName() {

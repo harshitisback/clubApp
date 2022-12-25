@@ -1,6 +1,8 @@
 package com.example.menu.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ public class PastAdapter extends RecyclerView.Adapter<PastAdapter.ViewHolder> {
 
     private final Context context;
     private final List<past> pastList;
+    String link;
 
     public PastAdapter(Context context, List<past> pastList) {
         this.context = context;
@@ -39,6 +42,16 @@ public class PastAdapter extends RecyclerView.Adapter<PastAdapter.ViewHolder> {
         holder.name.setText(pastList.get(position).getName());
         holder.mode.setText(pastList.get(position).getMode());
         holder.date.setText(pastList.get(position).getDate());
+        past p = pastList.get(position);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                link = p.getLink();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(link));
+                context.startActivity(i);
+            }
+        });
     }
 
     @Override
