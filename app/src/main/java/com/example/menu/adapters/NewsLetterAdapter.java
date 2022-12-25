@@ -1,6 +1,8 @@
 package com.example.menu.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 public class NewsLetterAdapter extends RecyclerView.Adapter<NewsLetterAdapter.ViewHolder> {
     Context context;
     ArrayList<NewslLetterModel> newsList;
+    String link;
 //    public ItemClickListener clickListener;
 
     public NewsLetterAdapter(Context context, ArrayList<NewslLetterModel> newsList) {
@@ -63,13 +66,17 @@ public class NewsLetterAdapter extends RecyclerView.Adapter<NewsLetterAdapter.Vi
             holder.date.setText(newslLetterModel.getDate());
             Glide.with(context).load(newslLetterModel.getImg()).into(holder.newsLetter_img);
 
-//            holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//
-//
-//                }
-//            });
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    link = newslLetterModel.getLink();
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(link));
+                    context.startActivity(i);
+
+
+                }
+            });
     }
 
     @Override

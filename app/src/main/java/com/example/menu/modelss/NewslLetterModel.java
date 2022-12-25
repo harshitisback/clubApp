@@ -1,17 +1,26 @@
 package com.example.menu.modelss;
 
 public class NewslLetterModel {
-    String name, img, date;
+    String name, img, date , link;
 
     public NewslLetterModel() {
 
     }
 
-    public NewslLetterModel(String name, String img, String date) {
+    public NewslLetterModel(String name, String img, String date, String link) {
         this.name = name;
         this.img = img;
         this.date = date;
+        this.link = link;
 
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getName() {
