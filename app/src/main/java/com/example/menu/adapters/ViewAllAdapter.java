@@ -1,5 +1,6 @@
 package com.example.menu.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHolder> {
 
-    String link;
+
 
     Context context;
     ArrayList<ViewAllModelPast> viewAllModelPastArrayList;
@@ -41,7 +42,7 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewAllAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewAllAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         ViewAllModelPast viewAllModelPast = viewAllModelPastArrayList.get(position);
         holder.name.setText(viewAllModelPast.getName());
@@ -52,10 +53,11 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                link = viewAllModelPast.getLink();
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(link));
-                context.startActivity(i);
+
+                String link = viewAllModelPastArrayList.get(position).getLink();
+                Intent a = new Intent(Intent.ACTION_VIEW);
+                a.setData(Uri.parse(link));
+                context.startActivity(a);
             }
         });
     }
@@ -65,7 +67,7 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
         return viewAllModelPastArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView viewAllImage;
         TextView name, mode, date;
         public ViewHolder(@NonNull View itemView) {

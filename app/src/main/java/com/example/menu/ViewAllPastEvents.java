@@ -36,7 +36,7 @@ public class ViewAllPastEvents extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         viewAllRec = findViewById(R.id.viewAllpastrec);
 
-        viewAllRec.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL, false));
+        viewAllRec.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false));
         modelPastArrayList = new ArrayList<>();
         viewAllAdapter = new ViewAllAdapter(getApplicationContext(), modelPastArrayList);
         viewAllRec.setAdapter(viewAllAdapter);
