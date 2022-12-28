@@ -13,10 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.example.menu.R;
+import com.example.menu.ViewAllPastEvents;
 import com.example.menu.adapters.OngoingAdapter;
 import com.example.menu.adapters.PastAdapter;
 import com.example.menu.adapters.UpcommingAdapter;
@@ -39,6 +41,8 @@ public class HomeScreen extends Fragment {
     List<upcomming> upcommingList;
     UpcommingAdapter upcommingAdapter;
 
+    TextView viewAllpast;
+
     FirebaseFirestore db;
 
 
@@ -49,9 +53,23 @@ public class HomeScreen extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
         db = FirebaseFirestore.getInstance();
         View root = inflater.inflate(R.layout.fragment_home_screen, container, false);
+
+        viewAllpast = root.findViewById(R.id.viewMorepast);
+
+        // click on view more past
+
+        viewAllpast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callViewMore();
+            }
+        });
+
 
         ImageView profile_pic = (ImageView) root.findViewById(R.id.profile_pic_home_screen);
 
@@ -156,6 +174,11 @@ public class HomeScreen extends Fragment {
 
         return root;
 
+    }
+
+    private void callViewMore() {
+
+        startActivity(new Intent(getActivity(), ViewAllPastEvents.class));
     }
 
 }
