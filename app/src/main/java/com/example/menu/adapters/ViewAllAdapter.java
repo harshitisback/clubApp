@@ -1,6 +1,8 @@
 package com.example.menu.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,8 @@ import com.example.menu.modelss.ViewAllModelPast;
 import java.util.ArrayList;
 
 public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHolder> {
+
+    String link;
 
     Context context;
     ArrayList<ViewAllModelPast> viewAllModelPastArrayList;
@@ -48,7 +52,10 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                link = viewAllModelPast.getLink();
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(link));
+                context.startActivity(i);
             }
         });
     }
