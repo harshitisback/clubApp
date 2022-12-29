@@ -1,58 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".article_description_screen">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/piczoomed"
+            android:id="@+id/post_detail_img"
+            android:layout_width="398dp"
+            android:layout_height="304dp"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"/>
+            android:paddingRight="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.005"
+            app:srcCompat="@drawable/piczoomed" />
 
         <TextView
+            android:id="@+id/name_blog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_bg_white"
-            android:text="Description 1"
             android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/round_bg_white"
             android:paddingLeft="40dp"
-            android:paddingRight="40dp"
             android:paddingTop="5dp"
+            android:paddingRight="40dp"
             android:paddingBottom="5dp"
-
-            android:fontFamily="@font/poppins_bold"
-            android:textSize="26sp" />
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.534"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/text_written_by"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Written by - Editor name"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="15dp"
+            android:padding="2dp"
+            android:text="Written by - "
+            android:textColor="@color/black"
             android:textSize="18sp"
-            android:fontFamily="@font/poppins_bold"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="20dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/post_detail_editor_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/poppins_medium"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="2dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/text_written_by"
+            app:layout_constraintTop_toBottomOf="@+id/name_blog" />
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+        <TextView
+            android:id="@+id/post_detail_desc"
+            android:layout_width="353dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="75dp"
+            android:lineSpacingExtra="8dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:textColor="#4a4a4a"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="-1.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_written_by"
+            app:layout_constraintVertical_bias="-1.0" />
 
 
-    </LinearLayout>
 
-</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

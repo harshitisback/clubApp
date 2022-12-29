@@ -1,36 +1,62 @@
 package com.example.menu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+
 
 public class articles_page_screen extends AppCompatActivity {
+
+    RecyclerView article_rec;
+    FirebaseFirestore db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles_page_screen);
-    }
 
-    public void areadmorebtn1(View view) {
-        Intent i2 = new Intent(getApplicationContext(),article_description_screen.class);
-        startActivity(i2);
-    }
+        // id's
+        db = FirebaseFirestore.getInstance();
 
-    public void upcoming(View view) {
-        Intent i3 = new Intent(getApplicationContext(),upcoming_events_screen.class);
-        startActivity(i3);
-    }
 
-    public void ongoingevents(View view) {
-        Intent i4 = new Intent(getApplicationContext(),ongoing_events_screen.class);
-        startActivity(i4);
-    }
+        ArrayList<ArticleModel> articlelist;
+        ArticleAdapter articleAdapter;
 
-    public void blogspage(View view) {
-        Intent i5 = new Intent(getApplicationContext(),blogs_screen.class);
-        startActivity(i5);
+        article_rec = findViewById(R.id.article_rec);
+        article_rec.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false));
+        articlelist = new ArrayList<>();
+         articleAdapter = new ArticleAdapter(this,  articlelist);
+        article_rec.setAdapter(articleAdapter);
+
+
+        db.collection("ArticleCollection")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @SuppressLint("NotifyDataSetChanged")
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot documentSnapshot : task.getResult()) {
+                                ArticleModel articleModel = documentSnapshot.toObject(ArticleModel.class);
+                                articlelist.add(articleModel);
+                                articleAdapter.notifyDataSetChanged();
+                            }
+                        }
+                    }
+                });
+
     }
 }
